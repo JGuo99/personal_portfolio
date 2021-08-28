@@ -1,0 +1,58 @@
+/* Content Container */
+.row>* {
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    height: 50px;
+    padding: 0;
+
+    #logo {
+        font-size: 24px;
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+    
+    #submit, #searchIcon {
+        height: 18px;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    #searchBox {
+        border-radius: 75px;
+        padding: 8px;
+        box-shadow: none;
+    }
+}
+
+/* Filter Bar */
+.filterbar {
+    height: 50px;
+
+    .item-action {
+        font-size: 13px;
+        width: 100px;
+        margin: 0 5px;
+    }
+
+    .action-all {
+        width: 50px;
+        margin-left: 15px;
+    }
+
+    .list-container {
+        padding-top: 0;
+        scrollbar-width: none;
+    }
+
+    /* For Chrome, Safari and Opera */
+    form::-webkit-scrollbar {
+        display: none;
+    }
+
+    ul::-webkit-scrollbar {
+        display: none;
+    }
+}

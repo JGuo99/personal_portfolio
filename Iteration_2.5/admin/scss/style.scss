@@ -1,0 +1,156 @@
+$primary-color: #272A37;
+$secondary-color: #faebd7;
+$secondary-color-accent-1: #B69870;
+
+body {
+    margin: 0;
+    width: auto;
+    height: auto;
+    background: $primary-color;
+    color: $secondary-color;
+}
+
+.custom-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.seperator {
+    overflow: visible; /* For IE */
+    padding: 0;
+    width: 95%;
+    border: none;
+    border-top: medium double $secondary-color;
+    color: $secondary-color;
+    text-align: center;
+    height: 0;
+    margin: 15px auto;
+}
+
+.seperator:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    /* background: transparent; */
+    background: $primary-color;
+}
+
+/* Create New Category Styles */
+.no-round-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.no-round-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Remove Table Styles */
+.table {
+    color: $secondary-color;
+}
+
+/* Update Card Styles */
+.update-toggle {
+    width: 100%;
+}
+
+.content-container {
+    .row {
+        margin-top: 0;
+    }
+
+    .card {
+        background: transparent;
+        color: $secondary-color;
+        text-decoration: none;
+        border: none;
+    }
+
+    .card-img-top {
+        aspect-ratio: 16/9;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.update-img-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+.img-update-container {
+    position: relative;
+}
+
+.img-update-container:hover {
+    opacity: 0.4;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    .update-img-icon {
+        display: block;    
+    }
+}
+
+.card {
+    .card-body {
+        text-align: left;
+        padding: 0;
+    }
+    
+    .card-title {
+        font-size: 1.15rem;
+        font-weight: 900;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    input, select {
+        color: $secondary-color-accent-1;
+        display: block;
+        background: transparent;
+        border: 1px solid $secondary-color;
+        padding: 5px;
+        margin: 10px auto;
+        width: 100%;
+        overflow-x: scroll;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    select {
+        background: $primary-color;
+        appearance: menulist;
+    }
+
+    option {
+        color: $secondary-color;
+    }
+
+    button {
+        display: block;
+        margin: 10px auto;
+        font-size: 1.1rem;
+        width: 100%;
+        height: 40px;
+    }    
+} 
+
+::placeholder {
+    color: $secondary-color;
+}

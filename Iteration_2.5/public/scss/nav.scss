@@ -1,0 +1,69 @@
+$primary-color: #272A37;
+$primary-color-accent-1: #3c4155;
+$secondary-color: #faebd7;
+$secondary-color-accent-1: #B69870;
+
+#logo {
+    width: auto;
+    cursor: pointer;
+    font-size: 35px;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-weight: 100;
+    transition: all 200ms ease-in-out;
+}
+
+#logo:hover {
+    color: $secondary-color-accent-1;
+}
+
+.navbar {
+    width: auto;
+    height: 80px;
+    // margin: 0 2%;
+    // margin-top: 25px;
+    padding: 15px;
+    display: block;
+    background: $primary-color-accent-1;
+   
+    #tabs {
+        display: flex;
+        font-family: 'Zen Tokyo Zoo', cursive;
+        font-size: 22px;
+        font-weight: 100;
+        // transform: translateY(-2000%);
+        // visibility: hidden;
+        // transition: all .2s ease-in-out .2s;
+    }
+
+    #fluid-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+    }
+}
+
+#tabs {
+    .action-style {
+        border-radius: 15px;
+        text-decoration: none;
+        font-size: 24px;
+        color: $secondary-color;
+        padding: 0 20px;        
+        transition: all 200ms ease-in-out;
+    }
+
+    .action-style:hover{
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.35);
+        color: $secondary-color-accent-1;
+    }
+}
+
+.fa-hamburger {
+    color: $secondary-color;
+    font-size: 35px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
