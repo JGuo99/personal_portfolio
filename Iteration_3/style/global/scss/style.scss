@@ -166,6 +166,11 @@ p {
     display: none;
 }
 
+.item-action {
+    color: $secondary-normal;
+    text-decoration: none;
+}
+
 // Modal (aka Custom Alert)
 .modal {
     .modal-title {

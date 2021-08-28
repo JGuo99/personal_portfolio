@@ -50,7 +50,9 @@
     <div class="nav-spacer"></div>
     <div id="navbar">
         <div id="fluid-container">
-            <h1 id="logo">Sheng Guo</h1>
+            <a href="#" class="item-action" data-toggle="modal" data-target="#alertModal">
+                <h1 id="logo">Sheng Guo</h1>
+            </a>
             <div id="tabs">
                 <!-- <a href="#about" class="action-style" id="about-a" href="javascript:void(0);">About</a>
                 <a href="#contact" class="action-style" id="contact-a" href="javascript:void(0);">Contact</a>
@@ -138,8 +140,10 @@
         </span>
         <ul id="menu-items">
             <li><a href="museum.php"><i class="icon fas fa-archway fa-2x"></i>Museum</a></li>
-            <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i class="icon fas fa-tasks fa-2x"></i>Wip</a></li>
-            <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i class="icon fas fa-lightbulb fa-2x"></i>Ideas</a></li>
+            <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i
+                        class="icon fas fa-tasks fa-2x"></i>Wip</a></li>
+            <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i
+                        class="icon fas fa-lightbulb fa-2x"></i>Ideas</a></li>
             <li><a href="https://preview.p5js.org/JeffGuo1/present/GMTwwJhDa">
                     <i class="icon fas fa-palette fa-2x"></i>Art</a></li>
             <li><a onclick="contactOverlay();"><i class="fas fa-comment fa-2x"></i>Contact</a></li>
@@ -156,7 +160,7 @@
                                         <p class="tag">
                                             SOFTWARE ENGINEER & DEVELOPER
                                         </p>
-                                        <h1>Sheng Guo.</h1>
+                                        <h1>Sheng Guo</h1>
                                         <p style="text-align:center">
                                             Also known as Jeff for most of my life.
                                         </p>
