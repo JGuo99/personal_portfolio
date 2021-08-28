@@ -138,8 +138,8 @@
         </span>
         <ul id="menu-items">
             <li><a href="museum.php"><i class="icon fas fa-archway fa-2x"></i>Museum</a></li>
-            <li class="disabled-action"><a href="#"><i class="icon fas fa-tasks fa-2x"></i>Wip</a></li>
-            <li class="disabled-action"><a href="#"><i class="icon fas fa-lightbulb fa-2x"></i>Ideas</a></li>
+            <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i class="icon fas fa-tasks fa-2x"></i>Wip</a></li>
+            <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i class="icon fas fa-lightbulb fa-2x"></i>Ideas</a></li>
             <li><a href="https://preview.p5js.org/JeffGuo1/present/GMTwwJhDa">
                     <i class="icon fas fa-palette fa-2x"></i>Art</a></li>
             <li><a onclick="contactOverlay();"><i class="fas fa-comment fa-2x"></i>Contact</a></li>
