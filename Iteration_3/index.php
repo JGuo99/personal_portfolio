@@ -56,10 +56,32 @@
                 <a href="#contact" class="action-style" id="contact-a" href="javascript:void(0);">Contact</a>
                 <a href="#social" class="action-style" id="social-a">Social</a> -->
                 <a href="museum.php" class="action-style">Museum</a>
-                <a href="#" class="action-style disabled-action">Wip</a>
-                <a href="#" class="action-style disabled-action">Ideas</a>
+                <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Wip</a>
+                <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Ideas</a>
                 <a href="https://preview.p5js.org/JeffGuo1/present/GMTwwJhDa" target="_blank"
                     class="action-style">Art</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Notice</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    This site is currently under development. More features will be added soon - just like the
+                    action you are trying to access!
+                    <br><br>
+                    Thank you for your understanding. <br>
+                    Contact: <a href="mailto: sheng.guo@sguo.tech">Admin</a> - For Any Issues
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
@@ -172,9 +194,9 @@
                                         <p>
                                             I am a graduate of 2020 from the <em>University of Illinois at Chicago</em>,
                                             with a degree in Computer Science. Currently pursuing a Master of Science
-                                            with the <em>New York University</em>. <br>
+                                            with the <em>New York University</em>. <br><br>
                                             My interests focus on designing, developing,
-                                            and analyzing algorithms and data to help improve the current state of
+                                            and analyzing algorithms and data to help improve the current state of the
                                             technological society. My obsession with computers, designs, and
                                             development has help me acheive many success and gain a wealth of
                                             knowledge, but I am still a young and inexpereienced developer that is
@@ -283,6 +305,10 @@
                             onmouseout="hoverView('reset')" id="i5" class="custom-icon5 fab fa-instagram"
                             target="_blank"></a>
                     </div>
+                    <div class="copyright">
+                        <small>&copy; Copyright <span id="currDate"></span>, <a href="https://www.sguo.tech">Sheng
+                                Guo</a>. All Rights Reserved</small>
+                    </div>
                 </section>
                 <!-- </footer> -->
             </div>
@@ -293,6 +319,8 @@
 <script>
     $(window).on('load', function () {
         $("body").removeClass("preload");
+        var current = new Date();
+        document.getElementById("currDate").innerHTML = current.getFullYear();
     });
 
     function contactOverlay() {
@@ -300,21 +328,6 @@
         overlay.classList.toggle("overlay-big");
         $("body").toggleClass("no-scroll");
     }
-
-    // $(window).on("click", ".contact-action", function () {
-    //     // me = this;
-    //     me = "overlay-small";
-    //     setTimeout(function () {
-    //         $("overlay-small").addClass("overlay-big");
-    //     }, 1);
-    // });
-
-    // $(window).on("click", ".overlay-big", function () {
-    //     me = this;
-    //     setTimeout(function () {
-    //         $(me).removeClass("overlay-big");
-    //     }, 1);
-    // });
 </script>
 <script src="scripts/home/script.js"></script>
 <script src="scripts/home/nav.js"></script>

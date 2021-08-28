@@ -1,8 +1,13 @@
-$primary-color-dark: #272A37;
-$primary-color-normal: #3c4155;
-$primary-color-light: #454A5E;
-$secondary-color: #faebd7;
-$secondary-color-accent-1: #B69870;
+$primary-dark: #272A37;
+$primary-normal: #3c4155;
+$primary-light: #454A5E;
+$primary-royal: #0e2158;
+$secondary-normal: #faebd7;
+$secondary-accent-1: #B69870;
+$deep-dark: #292929;
+$coal-dark: #363636;
+$lead-grey: #434343;
+$base-grey: #4f4f4f;
 
 .preload * {
     transition: none !important;
@@ -11,14 +16,24 @@ $secondary-color-accent-1: #B69870;
     -ms-transition: none !important;
     -o-transition: none !important;
 }
+
+.copyright {
+    text-align: center;
+    color: $deep-dark;
+    padding: 5px;
+    a {
+        color: $secondary-accent-1;
+    }
+}
+
 html, body {
     height: 100%;
 }
 
 body {
     position: relative;
-    background-color: $primary-color-normal;
-    color: $secondary-color;
+    background-color: $primary-normal;
+    color: $secondary-normal;
     font-family: 'Lato', sans-serif;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -51,8 +66,8 @@ p {
 
 .general-butt {
     text-decoration: none;
-    background-color: $primary-color-dark;
-    color: $secondary-color;
+    background-color: $primary-dark;
+    color: $secondary-normal;
     border-radius: 25px;
     padding: 15px 40px;
     border: 0;
@@ -64,7 +79,7 @@ p {
 }
 
 .general-butt:hover {
-    color: $secondary-color-accent-1;
+    color: $secondary-accent-1;
     transform: translateY(-10px);
 }
 
@@ -74,8 +89,8 @@ p {
     margin: 5% auto;
     max-width: 1100px;
     width: 90%;
-    background: $secondary-color;
-    color: $primary-color-dark;
+    background: $secondary-normal;
+    color: $primary-dark;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -121,10 +136,10 @@ p {
     border: 1px solid #292929;
     border-radius: 50%;
     padding: 5px 15px;
-    color: $secondary-color-accent-1;
+    color: $secondary-accent-1;
     transition: all 250ms;
     z-index: 1;
-    -webkit-text-stroke: 1px $secondary-color;
+    -webkit-text-stroke: 1px $secondary-normal;
 }
 
 .contact-action:hover {
@@ -150,6 +165,19 @@ p {
 .overlay-small > * {
     display: none;
 }
+
+// Modal (aka Custom Alert)
+.modal {
+    .modal-title {
+        color: #643132;
+        font-weight: 900;
+    }
+
+    .modal-body {
+        color: $deep-dark;
+    }
+}
+
 
 // Ultra Wide
 @media (min-width: 2560px) {
@@ -194,7 +222,7 @@ p {
     margin: 0;
     transform: translate(0);
     border-radius: 0;
-    background: $primary-color-light;
+    background: $primary-light;
     z-index: 99;
 }
 

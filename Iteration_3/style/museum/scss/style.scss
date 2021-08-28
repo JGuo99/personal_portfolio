@@ -1,27 +1,42 @@
-$primary-color-dark: #272A37;
-$primary-color-light: #3c4155;
-$secondary-color: #faebd7;
-$secondary-color-accent-1: #B69870;
+$primary-dark: #272A37;
+$primary-normal: #3c4155;
+$primary-light: #454A5E;
+$primary-royal: #0e2158;
+$secondary-normal: #faebd7;
+$secondary-accent-1: #B69870;
+$deep-dark: #292929;
+$coal-dark: #363636;
+$lead-grey: #434343;
+$base-grey: #4f4f4f;
 
 body {
-    background: $primary-color-dark;
+    background: $primary-dark;
     margin: 0;
     width: auto;
     height: auto;
     position: relative;
 }
 
+footer {
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    max-height: 50px;
+    width: 100%;
+    background: $primary-normal;
+}
+
 /* Navbar */
 .navbar {
     height: auto;
     margin: 0;
-    background: $primary-color-dark;
+    background: $primary-dark;
     padding: 10px 0;
     z-index: 99;
     display: block;
 
     a:hover {
-        color: $secondary-color-accent-1;
+        color: $secondary-accent-1;
     }
 
     .list-container {
@@ -54,7 +69,7 @@ body {
 }
 
 .item-action {
-    color: $secondary-color;
+    color: $secondary-normal;
     text-decoration: none;
 }
 
@@ -63,7 +78,7 @@ body {
 #searchBox {
     border-radius: 55px;
     padding: 10px;
-    background: $primary-color-dark;
+    background: $primary-dark;
     display: flex;
     align-items: center;
     // box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.25),
@@ -75,7 +90,7 @@ body {
 
 #submit {
     display: none;
-    color: $secondary-color;
+    color: $secondary-normal;
     font-size: 26px;
     border: none;
     padding: 0;
@@ -86,7 +101,7 @@ body {
 }
 
 #searchIcon {
-    color: $secondary-color;
+    color: $secondary-normal;
     width: 26px;
     font-size: 26px;
     cursor: pointer;
@@ -98,7 +113,7 @@ body {
 }
 
 #submitIcon {
-    color: $secondary-color;
+    color: $secondary-normal;
 }
 
 #submitIcon:hover {
@@ -106,7 +121,7 @@ body {
 }
 
 .navbar input {
-    color: $secondary-color;
+    color: $secondary-normal;
     font-size: 16px;
     padding: 0;
     width: 0;
@@ -135,7 +150,7 @@ body {
 .filterbar {
     width: 100%;
     height: 70px;
-    background: $primary-color-light;
+    background: $primary-light;
 
     .list-container {    
         margin: 0 auto;
@@ -210,13 +225,13 @@ body {
         radial-gradient(farthest-side at 0 75%, rgba(0,0,0, 0.5), rgba(0,0,0,0)),
         radial-gradient(farthest-side at 100% 75%, rgba(0,0,0, 0.5), rgba(0,0,0,0)) 0 100%; */
             /* Shadows */ 
-        linear-gradient(to right, #3c4155, #3c4155),
-        linear-gradient(to right, #3c4155, #3c4155),
+        linear-gradient(to right, $primary-normal, $primary-normal),
+        linear-gradient(to right, $primary-normal, $primary-normal),
     
     /* Shadow covers */ 
         linear-gradient(to right, rgba(0,0,0,.5), rgba(255,255,255,0)),
         linear-gradient(to left, rgba(0,0,0,.5), rgba(255,255,255,0));   
-    background-color: $primary-color-light;
+    background-color: $primary-normal;
     background-repeat: no-repeat;
     background-attachment: local, local, scroll, scroll;
     background-size: 75px 100%, 75px 100%, 30px 100%, 30px 100%;
@@ -227,11 +242,12 @@ body {
 .content-container {
     .row {
         margin-top: 0;
+        padding-bottom: 50px;   // compensate the footer height
     }
 
     .card {
         background: transparent;
-        color: $secondary-color;
+        color: $secondary-normal;
         text-decoration: none;
         border: none;
     }

@@ -105,11 +105,6 @@
             <a href="index.php" class="item-action">
                 <h1 id="logo">Sheng Guo</h1>
             </a>
-            <!-- <li class="item-container">
-                <a href="#" class="item-action">
-                    <span class="option-title">Option 2</span>
-                </a>
-            </li> -->
             <!-- Search Box -->
             <form method="GET" id="searchBox" class="item-container">
                 <!-- <img src="museum/search.png" id="searchIcon">   To Be Changed -->
@@ -164,7 +159,7 @@
                 $data->execute();   // PDO Version
                 foreach($data as $value) {
             ?>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                     <a class="card" href="<?php echo $value['link']; ?>" target="_blank">
                         <div class="card-img-container">
                             <!-- Retrieving Stored Image From DB -->
@@ -185,6 +180,11 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="copyright">
+            <small>&copy; Copyright <span id="currDate"></span>, <a href="https://www.sguo.tech">Sheng Guo</a>. All Rights Reserved</small>
+        </div>
+    </footer>
 </body>
 <!-- Scripts -->
 <script src="scripts/museum/search.js"></script>

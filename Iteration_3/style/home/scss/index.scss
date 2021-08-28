@@ -3,7 +3,11 @@ $primary-color-normal: #3c4155;
 $primary-color-light: #454A5E;
 $primary-color-royal: #0e2158;
 $secondary-color: #faebd7;
-$dark-color: #292929;
+$secondary-color-accent-1: #B69870;
+$deep-dark: #292929;
+$coal-dark: #363636;
+$lead-grey: #434343;
+$base-grey: #4f4f4f;
 
 .section-bar {
     ul {
@@ -76,7 +80,7 @@ $dark-color: #292929;
 
 // Intro Style
 #intro {
-    background: $dark-color;
+    background: $deep-dark;
     // height: calc(100vh - 80px);
     height: 100vh;
     padding: 5%;
@@ -127,7 +131,7 @@ $dark-color: #292929;
 #about {
     // background: #f7484e;
     // background: #643132;
-    background: #363636;
+    background: $coal-dark;
     height: 100vh;
     padding: 5%;
     position: relative;
@@ -170,7 +174,7 @@ $dark-color: #292929;
 // Skills Style
 #skill {
     // background: #2F4F4F;
-    background: #434343;
+    background: $lead-grey;
     height: 100vh;
     padding: 5%;
     position: relative;
@@ -229,7 +233,7 @@ $dark-color: #292929;
 // Social Links Style
 #social {
     // background: transparent;
-    background: #4f4f4f;
+    background: $base-grey;
 
     .content-type2 {
         height: 100px;
