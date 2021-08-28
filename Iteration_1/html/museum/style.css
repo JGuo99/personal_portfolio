@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
+/* Fluid Contianer For Museum */
+#fluid-container {
+    transition: none;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.navbar a:hover {
+    color: #A1978A;
+}
+
+#logo {
+    text-align: left;
+    font-size: 28px;
+    margin: 0;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.list-container {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 8px;
+    align-items: center;
+    list-style: none;
+}
+
+.item-container {
+    /* display: flex; */
+    margin: auto;
+    justify-content: space-between;
+}
+
+.item-action {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+ /* Search */
+#searchBox {
+    border-radius: 55px;
+    padding: 10px;
+    background: #272A37;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.25),
+                -3px -3px 5px -1px rgba(255, 255, 255, 0.6);
+    margin-right: 20px;
+}
+
+#submit {
+    display: none;
+    color: antiquewhite;
+    font-size: 26px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 26px;
+    width: 26px;
+    background: transparent;
+}
+
+.active #submit {
+    display: flex;
+}
+
+#searchIcon {
+    color: antiquewhite;
+    width: 26px;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.75s ease-in-out;
+}
+
+.active #searchIcon {
+    display: none;
+}
+
+#searchIcon:hover {
+    color: #A1978A;
+}
+
+#submitIcon {
+    color: antiquewhite;
+}
+
+#submitIcon:hover {
+    color: #AD9B84;
+}
+
+.navbar input {
+    color: antiquewhite;
+    font-size: 16px;
+    padding: 0;
+    width: 0;
+    border: 0;
+    background: transparent;
+    outline: none;
+    transition: 0.75s;
+}
+
+.active input {
+    width: 180px;
+    padding: 0 10px;
+}
+
+/* Filter Bar/List */
+.filterbar {
+    width: 100%;
+    height: 130px;
+}
+
+.filterbar .reset-custom {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.filterbar .reset-custom:hover {
+    color: #A1978A;
+}
+
+.filterbar .list-container {
+    background: #3C4155;
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    -ms-overflow-style: none;   /* For IE and Edge */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0;
+    padding-top: 8px;
+    /* For Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #272A37 transparent;
+    scrollbar-width: 12px;
+}
+
+/* For Chrome, Safari and Opera */
+.filterbar form::-webkit-scrollbar {
+    display: none;
+}
+.filterbar ul::-webkit-scrollbar {
+    /* display: none; */
+    height: 12px;
+    width: 6px;
+}
+
+.filterbar ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.filterbar ul::-webkit-scrollbar-thumb {
+    background: #272A37;
+    border-radius: 25px;
+    border: 3px solid #3C4155;
+}
+
+.filterbar .item-action {
+    display: block;
+    background: transparent;
+    border: none;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2.5;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.filterbar img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-height: 68px;
+}
+
+.filterbar span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Content Container */
+.content-container .row {
+    margin-top: 0;
+}
+
+.content-container .card {
+    background: transparent;
+    color: antiquewhite;
+    text-decoration: none;
+    border: none;
+}
+
+.content-container .card-img-top {
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content-container .card-body {
+    padding: 0.5rem;
+}
+
+.content-container .card-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    /* white-space: pre; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    white-space: break-word;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden; */
+}
+
+.content-container .card-title::-webkit-scrollbar {
+    display: none;
+}
+
+.content-container .card-text {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, 
+    .container-md, .container-sm, 
+    .container-xl, .container-xxl {
+        max-width: 2000px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, 
+    .container-md, .container-sm, 
+    .container-xl, .container-xxl {
+        max-width: 1440px;
+    }
+}
+
+

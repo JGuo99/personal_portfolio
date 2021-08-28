@@ -1,0 +1,37 @@
+#social .module-container,
+#social .content-type2 {
+    height: 100px;
+}
+
+#social .icons {
+    padding: 0 20%;
+}
+
+#social .module-content {
+    min-height: 100px;
+}
+
+.custom-icon1, .custom-icon5 {
+    text-decoration: none;
+    color: #272A37;
+    transition: font-size 0.3s ease-in-out;
+    font-size: 42.5px;
+}
+
+.custom-icon2, .custom-icon4 {
+    text-decoration: none;
+    color: #272A37;
+    transition: font-size 0.3s ease-in-out;
+    font-size: 48.5px;
+}
+
+.custom-icon3 {
+    text-decoration: none;
+    color: #272A37;
+    transition: font-size 0.3s ease-in-out;
+    font-size: 55.5px;
+}
+
+.custom-icon4 {
+    font-size: 46.5px;
+}

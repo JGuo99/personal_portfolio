@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    width: auto;
+    height: auto;
+    background: #272A37;
+    color: antiquewhite;
+}
+
+/* Remove Table Styles */
+.table {
+    color: antiquewhite;
+}
+
+/* Update Card Styles */
+.content-container .row {
+    margin-top: 0;
+}
+
+.content-container .card {
+    background: transparent;
+    color: antiquewhite;
+    text-decoration: none;
+    border: none;
+}
+
+.content-container .card-img-top {
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content-container .card-body {
+    padding: 0.5rem;
+}
+
+.content-container .card-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-container .card-title::-webkit-scrollbar {
+    display: none;
+}
+
+.content-container .card-text {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}

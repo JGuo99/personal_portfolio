@@ -1,0 +1,121 @@
+$primary-color: #272A37;
+$primary-color-accent-1: #454A5E;
+$secondary-color: #faebd7;
+
+.center-form {
+    /* transform: translateY(50%); Move 150% of the container height */
+    text-align: center;
+    line-height: 2;
+    max-width: 50%;
+    border: 1px solid $secondary-color;
+    padding: 50px 0;
+    margin: 75px auto;
+    /* position: absolute;
+    top: 33%; */
+}
+
+.custom-btn {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Custom Tab Style */
+.custom-tab {
+    display: inline-flex;
+    margin-bottom: 5%;
+}
+
+.nav-pills {
+    .nav-link {
+        width: 250px;
+        border-radius: 0;
+        border: 2px solid $primary-color-accent-1;
+        color: $secondary-color;
+    }
+
+    .nav-link.active, 
+    .show>.nav-link {
+        background-color: $primary-color-accent-1;
+    }
+}
+
+.nav-item {
+    position: relative; /* reference to the ::before element */
+    margin: 0 auto;
+}
+
+/* Input Style */
+.input-container {
+    display: block;
+    width: 100%;
+    line-height: normal;
+    margin: auto;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input {
+    border: 2px solid $secondary-color;
+    outline: 0;
+    color: $secondary-color;
+    background: transparent;
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 50%;
+    /* max-width: 400px; */
+    height: 25%;
+    margin: 0 auto;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+    left: 25%;
+    top: -5px;
+    padding: 10px;
+    cursor: text;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+input:focus~label, input:valid~label {
+    top: -35px;
+    font-size: 16px;
+}
+
+/* Mobile Style */
+
+@media screen and (max-width: 426px) {
+    .center-form {
+        max-width: 100%;
+        border: none;
+    }
+    .nav-pills .nav-link {
+        width: 175px;
+    }
+    input {
+        width: 100%;
+    }
+    label {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .center-form {
+        max-width: 75%;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .center-form {
+        max-width: 60%;
+        border: none;
+    }
+}

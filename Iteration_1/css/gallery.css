@@ -1,0 +1,101 @@
+#gallery .module-container {
+    height: 400px;
+    display: flex;
+}
+
+.col-gallery {
+    color: antiquewhite;
+    height: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 25px;
+    position: relative;
+    transition: 0.35s ease-in-out;
+}
+
+.col-gallery:nth-child(1) {
+    background: #9d5988;
+}
+
+.col-gallery:nth-child(2) {
+    background: #867e5f;
+}
+
+.col-gallery:nth-child(3) {
+    background: #5d8369;
+}
+
+.col-gallery h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.col-gallery .caption {
+    max-width: 230px;
+    font-size: 16px;
+    margin: 28px 0;
+    display: none;
+}
+
+.caption button {
+    border: 1px solid antiquewhite;
+    background: transparent;
+    outline: none;
+    padding: 8px 18px;
+    color: antiquewhite;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.col-gallery img {
+    width: 75%;
+    padding-top: 35px;
+    display: flex;
+    margin: auto;
+}
+
+.col-gallery:hover {
+    flex-grow: 2.5;
+}
+
+.col-gallery:hover img {
+    width: 65%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.col-gallery:hover .caption {
+    display: block;
+}
+
+.col-gallery:hover h2 {
+    text-align: left;
+}
+
+#gallery {
+    position: relative;
+}
+
+#gallery .link {
+    font-size: 20px;
+    color: antiquewhite;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* Holds 5s then transitions out in 0.25s */
+    transition: 0.2s ease-in-out 3s;   
+    margin-right: 35px;
+    text-decoration: none;
+    z-index: -1;
+}
+
+#gallery .module-container:hover~.link {
+    top: -35px;
+    /* transitions In in 0.25s, does NOT hold */
+    transition: 0.2s ease-in-out 0s;
+    z-index: 1;
+}

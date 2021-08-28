@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff Guo - A Freelancer</title>
+
+    <!-- Favicon -->
+
+    <!-- Font Awesome [Logo] -->
+    <script src="https://kit.fontawesome.com/9bfc0a438f.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&family=Playball&family=Poiret+One&family=Zen+Tokyo+Zoo&display=swap');
+    </style>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/social.js"></script>
+    <script src="js/responsive.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/social.css">
+    <!-- For Mobile Layout -->
+    <link rel="stylesheet" href="" id="mobile"> 
+
+</head>
+<body>
+    <div id="fluid-container">
+        <div class="navbar">
+            <h1 id="logo">Sheng Guo</h1>
+            <div id="tabs">
+                <a href="#about" class="action-style" data-id="1">About</a>
+                <a href="#contact" class="action-style" data-id="2">Contact</a>
+                <a href="#social" class="action-style" data-id="3">Social</a>
+            </div>
+            <i type="button" id="nav-butt" href="javascript:void(0);" class="fas fa-hamburger" onclick="hamburgerNav()"></i>
+        </div>
+
+        <section id="intro">
+            <div class="module-container">
+                <div class="content-type1">
+                    <div class="col-1">
+                        <h1>Inspired by Passion</h1>
+                        <p>
+                            I cannot promise that I can deliver 100% of your imagination, but 
+                            I can promise that I would try my hardest to help you achieve your goal!
+                        </p>
+                        <div class="butt-container">
+                            <a class="general-butt" href="html/museum.php">
+                                Explore Projects
+                            </a>
+                        </div> 
+                    </div>
+                    <div class="col-1">
+                        <img src="images/professional.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="module-container" id="1">
+                <div class="content-type2">
+                    <div class="module-content">
+                        <h1>About Me</h1>
+                        <p>
+                            I am a graduate of 2020 from the University of Illinois at Chicago,
+                            with a degree in Computer Science. Currently pursuing a Master of Science
+                            with the New York University. My passion with computers, designs, and 
+                            development has help me acheive many success and gain a wealth of 
+                            knowledge, but I am still a young and inexpereienced developer that is 
+                            still hungry to learn. <br><br>
+                            Outside of the tech environment, I love travel to different parts of the
+                            world and explore their cultures, foods, and knowledge. Aside from traveling
+                            I love photography and coffee!<br><br>
+                            Hope that you and I will grow together as we work towards our own vision.
+                        </p>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-university"></i>
+                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-globe-americas"></i>
+                        <i class="fas fa-camera-retro"></i>
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="module-container">
+                <div class="content-type1">
+                    <div class="col-gallery">
+                        <h2>Mobile</h2>
+                        <img src="images/img1.png">
+                        <div class="caption">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                aliqua.
+                            </p>
+                            <button type="button">Know More</button>
+                        </div>
+                    </div>
+                    <div class="col-gallery">
+                        <h2>Full Stack</h2>
+                        <img src="images/img2.png">
+                        <div class="caption">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                aliqua.
+                            </p>
+                            <button type="button">Know More</button>
+                        </div>
+                    </div>
+                    <div class="col-gallery">
+                        <h2>Computer Vision</h2>
+                        <img src="images/img3.png">
+                        <div class="caption">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                aliqua.
+                            </p>
+                            <button type="button">Know More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="link">Explore More...</a>
+        </section>
+
+        <section id="contact">
+            <div class="module-container" id="2">
+                <div class="content-type2">
+                    <div class="module-content">
+                        <h1>Contact Me</h1>
+                        <form>
+                            <div class="row-form">
+                                <div class="input-group">
+                                    <input type="text" id="name" required>
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="number" required>
+                                    <label for="number">Phone</label>
+                                </div>
+                            </div>                           
+                            <div class="input-group">
+                                <input type="text" id="email" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" rows="8" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            <button type="submit" class="general-butt">Submit</button>        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section id="social">
+            <div class="module-container" id="3">
+                <div class="content-type2">
+                    <hr id="mobile-seperator">
+                    <div class="module-content icons">
+                        <a href="#" onmouseover="hoverView('1')" onmouseout="hoverView('reset')" id="i1" class="custom-icon1 fab fa-facebook-square"></a>
+                        <a href="#" onmouseover="hoverView('2')" onmouseout="hoverView('reset')" id="i2" class="custom-icon2 fab fa-twitter-square"></a>
+                        <a href="#" onmouseover="hoverView('3')" onmouseout="hoverView('reset')" id="i3" class="custom-icon3 fab fa-linkedin"></a>
+                        <a href="#" onmouseover="hoverView('4')" onmouseout="hoverView('reset')" id="i4" class="custom-icon4 fas fa-file-csv"></a>
+                        <a href="#" onmouseover="hoverView('5')" onmouseout="hoverView('reset')" id="i5" class="custom-icon5 fab fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </div>
+</body>
+<!-- Loading Screen -->
+<!-- <script type="text/javascript">
+    $(document).ready(function() {
+        setTimeout('$("#fluid-container").css("opacity", 1)', 1000);
+    });
+
+    $('#fluid-container').css('opacity', 0);
+    // $(window).load(function() {
+    //     $('#fluid-container').css('opacity', 1);
+    // });
+</script> -->
+</html>

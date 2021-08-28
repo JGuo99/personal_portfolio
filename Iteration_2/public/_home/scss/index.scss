@@ -1,0 +1,251 @@
+$primary-color: #272A37;
+$secondary-color: #faebd7;
+
+// Intro Style
+#intro {
+    .module-content p {
+        margin: 10% 5%;
+    }
+
+    .general-butt {
+        display: block;
+        margin: 10% 15%;
+        text-align: center;
+    }
+
+    #profile-img {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+        padding: 15px 10px 10px;
+        margin: auto;
+    }
+}
+
+// About Style
+#about {
+    .module-content {
+        margin: 5% auto;
+    }
+    
+    .module-content p {
+        margin: 15px 10%;
+    }
+}
+
+// Contact Form Style
+#contact {
+    .module-content {
+        margin: 5% auto;
+    }
+
+    form {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .input-group {
+        max-width: 565px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    input, textarea {
+        width: 100%;
+        max-width: 580px;
+        min-height: 16px;
+        padding: 10px;
+        outline: 0;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        background: transparent;
+        font-size: 16px;
+    }
+
+    label {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        color: $primary-color;
+        cursor: text;
+        transition: 0.2s;
+    }
+
+    input:focus~label,
+    input:valid~label,
+    textarea:focus~label,
+    textarea:valid~label {
+        top: -35px;
+        font-size: 15px;
+    }
+
+    textarea {
+        min-height: 200px;
+        max-height: 200px;
+    }
+
+    .row-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    .row-form .input-group {
+        flex-basis: 47%;
+    }
+
+    form {
+        .general-butt {
+            display: block;
+            margin: 0 15px 0 auto;
+            width: 50%;
+        }
+    }
+}
+
+// Gallery Style
+#gallery {
+    position: relative;
+
+    .module-container {
+        height: 400px;
+        display: flex;
+        background: transparent;
+    }
+
+    .col-gallery {
+        color: $secondary-color;
+        height: 100%;
+        flex: 1;
+        box-sizing: border-box;
+        padding: 25px;
+        position: relative;
+        transition: 0.35s ease-in-out;
+    }
+
+    .col-gallery:nth-child(1) {
+        background: #9d5988;
+    }
+
+    .col-gallery:nth-child(2) {
+        background: #867e5f;
+    }
+
+    .col-gallery:nth-child(3) {
+        background: #5d8369;
+    }
+
+    .col-gallery h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .col-gallery {
+        .caption {
+            max-width: 230px;
+            font-size: 16px;
+            margin: 28px 0;
+            display: none;
+        }
+    }
+
+    .caption {
+        button {
+            border: 1px solid $secondary-color;
+            background: transparent;
+            outline: none;
+            padding: 8px 18px;
+            color: $secondary-color;
+            border-radius: 30px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+
+    .col-gallery {
+        img {
+            width: 75%;
+            padding-top: 35px;
+            display: flex;
+            margin: auto;
+        }
+    }
+
+    .col-gallery:hover {
+        flex-grow: 2.5;
+    }
+
+    .col-gallery:hover {
+        img {
+            width: 65%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .col-gallery:hover {
+        .caption {
+            display: block;
+        }
+    }
+
+    .col-gallery:hover {
+        h2 {
+            text-align: left;
+        }
+    }
+
+}
+
+// Social Links Style
+#social {
+
+    .module-container,
+    .content-type2 {
+        height: 100px;
+    }
+
+    .icons {
+        padding: 0 20%;
+    }
+
+    .module-content {
+        min-height: 100px;
+    }
+
+    .custom-icon1,
+    .custom-icon5 {
+        text-decoration: none;
+        color: #272A37;
+        transition: font-size 0.3s ease-in-out;
+        font-size: 42.5px;
+    }
+
+    .custom-icon2,
+    .custom-icon4 {
+        text-decoration: none;
+        color: #272A37;
+        transition: font-size 0.3s ease-in-out;
+        font-size: 48.5px;
+    }
+
+    .custom-icon3 {
+        text-decoration: none;
+        color: #272A37;
+        transition: font-size 0.3s ease-in-out;
+        font-size: 55.5px;
+    }
+
+    .custom-icon4 {
+        font-size: 46.5px;
+    }
+}

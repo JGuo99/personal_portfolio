@@ -1,0 +1,32 @@
+$(document).ready(function() {
+    adjustStyle();
+    $(function() {
+        adjustStyle($(this).width());
+        $(window).resize(function() {
+            adjustStyle($(this).width());
+        });
+    });
+});
+
+function adjustStyle(width) {
+    width = parseInt(width);
+    var main = document.getElementById("fluid-container");
+    if(width >= 1000 && width <= 1500) {
+        main.style.margin = "0 10%";
+    } 
+    else if(width > 1500 && width <= 2000) {
+        main.style.margin = "0 20%";
+    }
+    else if(width > 2000) {
+        main.style.margin = "0 25%";
+    }
+    else if(width < 768) {
+        // $('#mobile').attr("href", "museum/mobile.css");
+        document.getElementById('logo').innerHTML = "SG";
+    }
+    else {    // Reset to Default
+        main.style.margin = "0";
+        // $('#mobile').attr("href", "");
+        document.getElementById('logo').innerHTML = "Sheng Guo";
+    }
+}

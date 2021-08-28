@@ -1,0 +1,6 @@
+Sections:
+ - Introduction ✓
+ - About Me ✓
+ - Showcase/Gallery of Projects/Experiences
+ - Contact Me ✓
+ - Social Links ✓

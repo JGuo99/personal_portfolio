@@ -1,0 +1,48 @@
+#logo {
+    width: auto;
+    cursor: pointer;
+    font-size: 50px;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-weight: 100;
+}
+
+.navbar {
+    width: 85%;
+    height: 60px;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-hamburger {
+    color: antiquewhite;
+    font-size: 35px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.navbar #tabs {
+    display: flex;
+    /* font-size: 22px; */
+    visibility: hidden;
+    transform: translateY(-2000%);
+    transition: all .2s ease-in-out .2s;
+}
+
+#tabs .action-style {
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    color: antiquewhite;
+    padding: 0 20px;
+}
+
+#tabs .action-style:hover{
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.35);
+    color: blanchedalmond;
+}
