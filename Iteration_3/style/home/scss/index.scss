@@ -81,7 +81,6 @@ $base-grey: #4f4f4f;
 // Intro Style
 #intro {
     background: $deep-dark;
-    // height: calc(100vh - 80px);
     height: 100vh;
     padding: 5%;
     position: relative;
@@ -94,22 +93,26 @@ $base-grey: #4f4f4f;
         height: fit-content;
     }
 
-    .tag {
-        text-align: center;
-        color: $primary-color-royal;
-        font-weight: 900;
-        font-size: 16px;
-    }
+    .module-content {
+        h1 {
+            font-family: 'Ballet', cursive;
+            font-size: 80px;
+            line-height: 60px;
+            margin: 5% 0;
+            padding: 5% 0;
+        }
 
-    .module-content h1 {
-        font-family: 'Ballet', cursive;
-        font-size: 80px;
-        line-height: 60px;
-        margin: 5% 0;
-        padding: 5% 0;
-    }
-    .module-content p {
-        margin: 10% 5%;
+        p {
+            margin: 10% 5%;
+            text-align: justify;
+        }
+        
+        .tag {
+            text-align: center;
+            color: $primary-color-royal;
+            font-weight: 900;
+            font-size: 16px;
+        }
     }
 
     .general-butt {
@@ -129,8 +132,6 @@ $base-grey: #4f4f4f;
 
 // About Style
 #about {
-    // background: #f7484e;
-    // background: #643132;
     background: $coal-dark;
     height: 100vh;
     padding: 5%;
@@ -145,17 +146,18 @@ $base-grey: #4f4f4f;
 
     .module-content {
         margin: 5% auto;
-    }
-    
-    .module-content p {
-        text-align: justify;
-        margin: 15px 10%;
-    }
 
-    .module-content p:first-child {
-        overflow-y: scroll;
-        height: 100%;
-        max-height: 700px;
+        p {
+            text-align: justify;
+            margin: 15px 10%;
+        }
+
+        &:first-child {
+            overflow-y: scroll;
+            height: 100%;
+            max-height: 700px;
+            text-overflow: ellipsis;
+        }
     }
 
     .img-style {
@@ -344,10 +346,10 @@ $base-grey: #4f4f4f;
         justify-content: space-between;
         max-width: 580px;
         margin: 0 auto;
-    }
-
-    .row-form .input-group {
-        flex-basis: 47%;
+        
+        .input-group {
+            flex-basis: 47%;
+        }
     }
 
     form {

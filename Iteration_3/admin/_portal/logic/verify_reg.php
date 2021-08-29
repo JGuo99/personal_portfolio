@@ -1,9 +1,9 @@
 <?php
     require_once "cred_config.php";
 
-    $email = $_POST['email'];
+    $email = $_POST['reg_email'];
     $user = $_POST['user'];
-    $pass = $_POST['pass'];
+    $pass = $_POST['reg_pass'];
 
     $sql = "SELECT * FROM user WHERE email = '$email'";
     $data = $conn->prepare($sql);

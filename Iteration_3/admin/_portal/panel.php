@@ -60,12 +60,12 @@
                 <form action="logic/verify_log.php" method="POST">
                     <div class="input-container">
                         <div class="input-group">
-                            <input type="text" id="email" name="email" required>
-                            <label for="email">Enter Email</label>
+                            <input type="text" id="log_email" name="log_email" required>
+                            <label for="log_email">Enter Email</label>
                         </div>
                         <div class="input-group">
-                            <input type="password" id="pass" name="pass" required>
-                            <label for="pass">Enter Password</label>
+                            <input type="password" id="log_pass" name="log_pass" required>
+                            <label for="log_pass">Enter Password</label>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary custom-btn">Login</button>
@@ -89,12 +89,12 @@
                             <label for="user">Create Username</label>
                         </div>
                         <div class="input-group">
-                            <input type="text" id="email" name="email" required>
-                            <label for="email">Enter Email</label>
+                            <input type="text" id="reg_email" name="reg_email" required>
+                            <label for="reg_email">Enter Email</label>
                         </div>
                         <div class="input-group">
-                            <input type="password" id="pass" name="pass" required>
-                            <label for="pass">Enter Password</label>
+                            <input type="password" id="reg_pass" name="reg_pass" required>
+                            <label for="reg_pass">Enter Password</label>
                         </div>
                         <!-- Implement Later 
                         <div class="input-group">

@@ -170,6 +170,14 @@
                                             computer
                                             engineer/scientist.
                                         </p>
+                                        <!-- <a class="general-butt" href="museum.php">
+                                Explore Projects
+                            </a> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="module-content">
+                                        <img id="profile-img" src="images/professional.jpg">
                                         <div class="section-bar">
                                             <ul>
                                                 <li><a href="#intro">Home</a></li>
@@ -178,13 +186,7 @@
                                                 <li><a href="#social">Social</a></li>
                                             </ul>
                                         </div>
-                                        <!-- <a class="general-butt" href="museum.php">
-                                Explore Projects
-                            </a> -->
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img id="profile-img" src="images/professional.jpg">
                                 </div>
                             </div>
                         </section>
@@ -273,7 +275,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="module-content">
-                                        <img class="img-style" src="images/placeholder.jpg" alt="placeholder">
+                                        <img class="img-style" src="images/nyu_uic.png" alt="placeholder">
                                         <div class="section-bar">
                                             <ul>
                                                 <li><a href="#intro">Home</a></li>
@@ -287,7 +289,6 @@
                             </div>
                         </section>
                     </div>
-
                 </div>
                 <!-- Social Section -->
                 <!-- <footer> -->
