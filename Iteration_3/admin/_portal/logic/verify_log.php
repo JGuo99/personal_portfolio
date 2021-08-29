@@ -7,6 +7,7 @@
     $sql = "SELECT * FROM user WHERE email = '$email' && password = '$pass'";
     $data = $conn->prepare($sql);
     $data->execute();
+    print_r($data);
     $find = $data->fetch();
     $result = $data->rowCount();
 
@@ -19,5 +20,4 @@
         echo 'if(confirm("Wrong Credentials!")){window.location = "../panel.php";}';
         echo '</script>';
     }
-
 ?>
