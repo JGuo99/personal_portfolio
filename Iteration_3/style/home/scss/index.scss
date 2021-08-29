@@ -57,6 +57,7 @@ $base-grey: #4f4f4f;
 }
 
 .module-container {
+    max-height: 85%;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     &::-webkit-scrollbar {
@@ -90,7 +91,7 @@ $base-grey: #4f4f4f;
         top: 50%; right: 50%;
         transform: translate(50%, -50%);
         margin: 0 auto;
-        height: fit-content;
+        // height: fit-content;
     }
 
     .module-content {
@@ -179,7 +180,7 @@ $base-grey: #4f4f4f;
         top: 50%; right: 50%;
         transform: translate(50%, -50%);
         margin: 0;
-        height: fit-content;
+        // height: fit-content;
     }
 
     h1 {
@@ -441,7 +442,7 @@ $base-grey: #4f4f4f;
     }
 }
 
-@media (orientation:landscape) and (max-device-width: 1000px) {
+@media only screen and (orientation:landscape) and (max-device-width: 600px) {
     #navbar {
         height: 60px;
         padding: 10px;

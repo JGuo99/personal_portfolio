@@ -32,7 +32,8 @@ body {
 }
 
 .page-content-inner {
-  height: 50%; // compensate for higher .content
+  // height: 50%; // compensate for higher .content
+  height: 100%;
   overflow-y: auto; // set expected overflow
 }
 
@@ -80,7 +81,8 @@ body {
 #menu-items {
   position: fixed;
   top: 10%;
-  left: 15%;
+  right: 10px;
+  width: auto;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -134,7 +136,7 @@ body {
 /* Let's open up the menu */
 .shazam {
   #page-content {
-    transform: rotate(-30deg);
+    transform: rotate(-30deg) translateY(-15%);
   }
 
   // this will show hidden content overflow when rotated,
