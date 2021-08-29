@@ -292,8 +292,7 @@
                 </div>
                 <!-- Social Section -->
                 <!-- <footer> -->
-                <section id="social">
-                    <!-- <hr id="mobile-seperator"> -->
+                <section id="social">                    
                     <div class="module-content icons">
                         <a href="https://www.facebook.com/jeff.guo.923/" onmouseover="hoverView('1')"
                             onmouseout="hoverView('reset')" id="i1" class="custom-icon1 fab fa-facebook-square"
@@ -310,6 +309,7 @@
                             onmouseout="hoverView('reset')" id="i5" class="custom-icon5 fab fa-instagram"
                             target="_blank"></a>
                     </div>
+                    <!-- <hr id="mobile-seperator"> -->
                     <div class="copyright">
                         <small>&copy; Copyright <span id="currDate"></span>, <a href="https://www.sguo.tech">Sheng
                                 Guo</a>. All Rights Reserved</small>

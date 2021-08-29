@@ -121,8 +121,17 @@ p {
     padding: 30px 25%;
 }
 
-// Contact Overlay
+// General Image Style
+.img-style {
+    aspect-ratio: 4/3;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    padding: 15px 10px 10px;
+    margin: auto;
+}
 
+// Contact Overlay
 .no-scroll {
     overflow: hidden;
 }
