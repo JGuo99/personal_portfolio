@@ -205,8 +205,8 @@
                                         <h1>About Me</h1>
                                         <p>
                                             I am a graduate of 2020 from the <em>University of Illinois at Chicago</em>,
-                                            with a degree in Computer Science. Currently pursuing a Master of Science
-                                            with the <em>New York University</em>. <br><br>
+                                            with a degree in Computer Science and a minor in Business Administration. 
+                                            Currently pursuing a Master of Science with the <em>New York University</em>. <br><br>
                                             My interests focus on designing, developing,
                                             and analyzing algorithms and data to help improve the current state of the
                                             technological society. My obsession with computers, designs, and
