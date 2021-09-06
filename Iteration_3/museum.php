@@ -85,13 +85,14 @@
             $sql = 
                 "SELECT * FROM projects, images 
                  WHERE projects.name LIKE '%{$searchInput}%'
-                 AND projects.id = images.pid";
+                 AND projects.id = images.pid
+                 ORDER BY last_edit DESC";
         } else {
             // Show All Category - DEFAULT
             $sql = "SELECT * FROM projects, images 
                     WHERE projects.category = images.category 
                     AND projects.id = images.pid
-                    ORDER BY projects.name";
+                    ORDER BY last_edit DESC";
         }
         $data = $conn->prepare($sql);
     ?>

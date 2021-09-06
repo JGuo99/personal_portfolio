@@ -1,0 +1,11 @@
+Table 1 (Header Content)
+    Columns:
+        - Name of the Project
+        - Project blog summary
+        - Category the project belongs to
+        - Quotes
+
+Table 2 (Body Content)
+    Columns:
+        - Sub-title of the blog | size(n)
+        - Sub-content
