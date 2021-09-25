@@ -21,6 +21,12 @@ body {
   background-color: $primary-color-light;
 }
 
+#progress-scroll {
+  img {
+    display: none;
+  }
+}
+
 #page-container {
   height: 100%;
 }
@@ -144,7 +150,8 @@ body {
   // plus, you will lose your current reading position
   // fixable with JS, not gonna bother
   // Temp. Fix ======================================
-  .page-content-inner { // Kinda working with the tranistion effect!
+  .page-content-inner {
+    // Kinda working with the tranistion effect!
     height: 100%;
   }
 
@@ -226,6 +233,7 @@ normal navbar will NOT work! */
 
 .contact-action {
   display: none;
+
   .fa-comment {
     display: none;
   }
@@ -245,22 +253,51 @@ normal navbar will NOT work! */
     height: fit-content;
   }
 
-  .module-content h1 {
-    padding: 10% 0;
-    font-weight: normal;
-  }
+  .module-content {
+    h1 {
+      padding: 10% 0;
+      font-weight: normal;
+    }
 
-  .module-content p {
-    text-align: justify;
-    font-size: 14px;
-    line-height: 20px;
-    margin: 15px 2%;
-  }
+    p {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 15px 2%;
+    }
 
-  .module-content .tag {
-    text-align: center;
-    color: $primary-color-light;
-    padding: 10px 0;
+    .tag {
+      text-align: center;
+      color: $primary-color-light;
+      padding: 10px 0;
+    }
+
+    #typewritter {
+      font-size: 70px;
+    }
+    #cursor {
+      border-bottom: solid 3px $secondary-color;
+    }
+
+    // Animation
+    /* text animation */
+    @keyframes animated-text {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 300px;
+      }
+    }
+    @keyframes animated-cursor{
+      from {
+          border-bottom-color: $secondary-color;
+      }
+      to {
+          border-bottom-color: transparent;
+      }
+  }
   }
 
   #profile-img {
@@ -284,24 +321,21 @@ normal navbar will NOT work! */
   .module-content {
     margin: 5% auto;
     transition: all 0.35s ease-in-out;
-  }
-
-  .module-content h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-
-  .module-content p {
-    text-align: justify;
-    font-size: 14px;
-    line-height: 20px;
-    margin: 15px 2%;
-  }
-
-  .module-content .tag {
-    text-align: center;
-    color: $primary-color-light;
-    padding: 10px 0;
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    p {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 15px 2%;
+    }
+    .tag {
+      text-align: center;
+      color: $primary-color-light;
+      padding: 10px 0;
+    }
   }
 
   .icons {
@@ -316,31 +350,28 @@ normal navbar will NOT work! */
 /* Skill Section */
 #skill {
   height: 95vh;
+
   .module-container {
     height: 95vh;
     background: transparent;
     color: $secondary-color;
   }
 
-  .module-content {
-    margin: 5% auto;
-    transition: all 0.35s ease-in-out;
-  }
-
-  .module-content h1 {
+  h1 {
     margin: 0;
     font-size: 24px;
   }
 
-  .module-content p {
-    text-align: justify;
-    font-size: 14px;
-    line-height: 20px;
-    margin: 15px 2%;
-  }
-
-  .img-style {
-    padding: 0;
+  .skill-container {
+    width: 100%;
+    .border-wrapper {
+      margin: 10px 5px;
+    }
+    .skill-content {
+      font-size: 22px;
+      font-weight: 700;
+      padding: 5px;
+    }
   }
 }
 

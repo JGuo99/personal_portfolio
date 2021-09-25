@@ -1,0 +1,114 @@
+$primary-color-dark: #272A37;
+$primary-color-normal: #3c4155;
+$primary-color-light: #454A5E;
+$primary-color-royal: #0e2158;
+$secondary-color: #faebd7;
+$secondary-color-accent-1: #B69870;
+$deep-dark: #292929;
+$coal-dark: #363636;
+$lead-grey: #434343;
+$base-grey: #4f4f4f;
+
+#blog-container {
+    padding: 5% 0;
+
+    .input-group {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    input, textarea {
+        width: 100%;
+        min-height: 16px;
+        padding: 10px;
+        outline: 0;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+        background: transparent;
+        font-size: 16px;
+    }
+
+    textarea {
+        width: 84%;
+    }
+
+    label {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        color: $secondary-color;
+        cursor: text;
+        transition: 0.2s;
+    }
+
+    input:focus~label,
+    input:valid~label,
+    textarea:focus~label,
+    textarea:valid~label {
+        top: -35px;
+        font-size: 15px;
+    }
+
+    textarea {
+        min-height: 200px;
+        max-height: 200px;
+    }
+
+    .row-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 580px;
+        margin: 0 auto;
+
+        .input-group {
+            flex-basis: 47%;
+        }
+    }
+
+    form {
+        width: 100%;
+        margin: auto;
+    }
+
+    .input-group-append {
+        width: 155px;
+    }
+
+    .custom-file-input {
+        width: 100%;
+        border: none;
+
+        &::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        &::before {
+            content: 'Upload Your Image';
+            display: inline-block;
+            background: linear-gradient(top, #f9f9f9, #e3e3e3);
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-weight: 700;
+            font-size: 10pt;
+        }
+
+        &:hover::before {
+            border-color: black;
+        }
+
+        &:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
+    }
+}

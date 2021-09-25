@@ -36,7 +36,7 @@
 
     <!-- Google Fonts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ballet&display=swap&family=Abril+Fatface&family=Lato&family=Playball&family=Poiret+One&family=Zen+Tokyo+Zoo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ballet&display=swap&family=Abril+Fatface&family=Lato&family=Playball&family=Poiret+One&family=Zen+Tokyo+Zoo&display=swap&family=Allura&display=swap');
     </style>
 
     <!-- Stylesheets -->
@@ -53,6 +53,11 @@
     <div class="loader-wrapper">
         <div class="pong-loader"></div>
     </div>
+
+    <div id="progress-scroll">
+        <img id="p-img" src="">
+    </div>
+
     <div class="nav-spacer"></div>
     <div id="navbar">
         <div id="fluid-container">
@@ -66,6 +71,7 @@
                 <a href="museum.php" class="action-style">Museum</a>
                 <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Wip</a>
                 <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Ideas</a>
+                <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Travel</a>
                 <a href="https://preview.p5js.org/JeffGuo1/present/GMTwwJhDa" target="_blank"
                     class="action-style">Art</a>
             </div>
@@ -166,7 +172,12 @@
                                         <p class="tag">
                                             SOFTWARE ENGINEER & DEVELOPER
                                         </p>
-                                        <h1>Sheng Guo</h1>
+                                        
+                                        <div id="typewritter">
+                                            Sheng Guo
+                                            <div id="cursor"></div>
+                                        </div>
+
                                         <p style="text-align:center">
                                             Also known as Jeff for most of my life.
                                         </p>
@@ -250,48 +261,60 @@
                         <!-- Skill Section -->
                         <section id="skill">
                             <div class="module-container row align-items-center">
-                                <div class="col-md-6">
-                                    <div class="module-content">
-                                        <h1>Technical Skills</h1>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="module-content">
-                                                    <ul>
-                                                        <li>Java</li>
-                                                        <li>Python</li>
-                                                        <li>JavaScript/jQuery</li>
-                                                        <li>C/C++</li>
-                                                        <li>MySQL/SQL</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="module-content">
-                                                    <ul>
-                                                        <li>PHP</li>
-                                                        <li>HTML</li>
-                                                        <li>CSS/SCSS</li>
-                                                        <li>C#/F#</li>
-                                                        <li>Git</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <h1>Often Used Skills</h1>
+                                <div class="skill-container">
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">Java</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">Python</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">JavaScript</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">jQuery</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">C</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">C++</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">MySQL</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">SQL</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">PHP</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">Django</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">CSS/SCSS</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">C#</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">F#</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">Git</p>                                
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="module-content">
-                                        <img class="img-style" src="images/nyu_uic.png" alt="placeholder">
-                                        <div class="section-bar">
-                                            <ul>
-                                                <li><a href="#intro">Home</a></li>
-                                                <li><a href="#about">About</a></li>
-                                                <li><a href="#skill">Skills</a></li>
-                                                <li><a href="#social">Social</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="section-bar">
+                                    <ul>
+                                        <li><a href="#intro">Home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#skill">Skills</a></li>
+                                        <li><a href="#social">Social</a></li>
+                                    </ul>
                                 </div>
+                                <!-- <p>***This module will be switched out! - This is a temporary holder for later features to come!</p> -->
                             </div>
                         </section>
                     </div>
@@ -345,6 +368,30 @@
 <script src="scripts/home/social.js"></script>
 <script src="scripts/home/responsive.js"></script>
 <script src="scripts/global/loader.js"></script>
-<!-- Loading Screen -->
+<script src="scripts/global/progress.js"></script>
+<script>
+    $(document).ready(function(){
+        // Choose random progress image of 94
+        var progress_img = document.getElementById("p-img");
+        progress_img.src = "images/transport/veh" + Math.floor(Math.random() * 94) + ".png"; 
 
+        // Touchmove is currently not working!
+        var events = ['scroll', 'touchmove'];
+        var lastScrollTop = 0;
+        for(var i = 0; i < events.length; i++) {
+            document.addEventListener(events[i], function() { // or window.addEventListener("scroll"....
+                // var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                    // downscroll code
+                    progress_img.style.transform = "scaleX(1)";
+                } else {
+                    // upscroll code
+                    progress_img.style.transform = "scaleX(-1)";
+                }
+                lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+            }, false);
+        }
+    });
+</script>
 </html>
