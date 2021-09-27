@@ -1,0 +1,261 @@
+$primary-color-dark: #272A37;
+$primary-color-normal: #3c4155;
+$primary-color-light: #454A5E;
+$primary-color-royal: #0e2158;
+$secondary-color: #faebd7;
+$secondary-color-accent-1: #B69870;
+$deep-dark: #292929;
+$coal-dark: #363636;
+$lead-grey: #434343;
+$base-grey: #4f4f4f;
+
+body {
+    background: $deep-dark;
+    overflow-y: hidden;
+}
+
+// Particle Background
+// Inspired by - https://codepen.io/alexitaylor/pen/RgxJwg?editors=1100
+/* Config */
+$color-bg: $deep-dark;
+$color-particle: #fff;
+$spacing: 3440px; // Width to display
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 200s;
+
+/* mixins */
+@function particles($max) {
+    $val: 0px 0px $color-particle;
+
+    @for $i from 1 through $max {
+        $val: #{$val},
+        random($spacing)+px random($spacing)+px $color-particle;
+    }
+
+    @return $val;
+}
+
+@mixin particles($max) {
+    box-shadow: particles($max);
+    border-radius: 50%;
+}
+
+/* Styles */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.page-bg,
+.animation-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.page-bg {
+    background: $color-bg;
+    background-blend-mode: screen;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.particle,
+.particle:after {
+    background: transparent;
+}
+
+.particle:after {
+    position: absolute;
+    content: "";
+    top: $spacing;
+}
+
+.particle-1 {
+    animation: animParticle $time-1 linear infinite;
+    @include particles(1000);
+    height: 2px;
+    width: 2px;
+}
+
+.particle-1:after {
+    @include particles(900);
+    height: 2px;
+    width: 2px;
+}
+
+.particle-2 {
+    animation: animParticle $time-2 linear infinite;
+    @include particles(800);
+    height: 2px;
+    width: 2px;
+}
+
+.particle-2:after {
+    @include particles(500);
+    height: 3px;
+    width: 3px;
+}
+
+.particle-3:after {
+    @include particles(1100);
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+}
+
+.particle-4 {
+    animation: animParticle $time-4 linear infinite;
+    @include particles(1200);
+    height: 1px;
+    width: 1px;
+}
+
+.particle-4:after {
+    @include particles(700);
+    height: 1px;
+    width: 1px;
+}
+
+@keyframes animParticle {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY($spacing * -1);
+    }
+}
+// Particle Background | END
+
+#navbar {
+    #fluid-container {
+        margin: 0 5%;
+    }
+}
+
+.main {
+    color: $deep-dark;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 85%;
+    height: 75%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    border: 3px solid $deep-dark;
+    border-radius: 1rem;
+    padding: 5%;
+    padding-right: 0;
+
+    .controller {
+        padding: 0;
+        border-right: 3px solid lighten($base-grey, 25%);
+        height: 100%;
+
+        .nav-list {
+            list-style: none;
+            margin: 10px 0;
+            width: 100px;
+            padding: 0;
+
+            a {
+                text-decoration: none;
+                color: unset;
+            }
+
+            .item {
+                padding: 10px 0;
+            }
+
+            .item.selected {
+                // Used with the logic JS
+                $itemColors: #db3236, #4885ed, #f4c20d, #3cba54;
+
+                @for $i from 1 through length($itemColors) {
+                    &:nth-child(#{length($itemColors)}n+#{$i}) {
+                        color: nth($itemColors, $i);
+                        border-right: 3px solid nth($itemColors, $i);
+                    }
+                }
+
+            }
+        }
+    }
+
+    .content {
+        padding: 0;
+        margin: 0 auto;
+        // transition: all 1s ease-in-out;
+        height: 100%;
+
+        $length: 4;
+        // Makes each loc-# div disappear
+        @for $i from 2 through $length {
+            #loc-#{$i} {
+                display: none;
+            }
+        }
+
+        .right-content {
+            padding: 0 5%;
+            overflow-y: scroll;
+            height: 100%;
+
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+
+            /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            h1 {
+                margin: 0;
+                margin-bottom: 50px;
+                padding: 5px;
+            }
+
+            .square {
+                aspect-ratio: 1; 
+            }
+
+            .landscape {
+                aspect-ratio: 16/9;
+            }
+
+            .portrait {
+                aspect-ratio: 4/5;
+            }
+
+            img {
+                padding: 1%;
+                width: 100%;
+                transform: scale(1);
+                z-index: 0;
+                transition: all 0.35s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}

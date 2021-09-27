@@ -87,11 +87,14 @@ body {
 #menu-items {
   position: fixed;
   top: 10%;
-  right: 10px;
+  // left: 45%;
+  right: 0;
   width: auto;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  // padding-left: 40%;
+  padding-right: 3%;
 
   li {
     height: 60px;
@@ -121,7 +124,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: darken($primary-color-light, 15%);
+    color: darken($secondary-color, 15%);
     transition: color .2s;
 
     .icon {
@@ -198,18 +201,19 @@ body {
 
 .module-container {
   margin: 10% auto;
+  display: contents;
 }
 
 /* Vertical Spacing */
-.verti-spacing {
-  // height: 100%;
-  display: flex;
-  flex-direction: column;
+// .verti-spacing {
+//   // height: 100%;
+//   display: flex;
+//   flex-direction: column;
 
-  .content {
-    flex: 1 1 auto;
-  }
-}
+//   .content {
+//     flex: 1 1 auto;
+//   }
+// }
 
 /* Nav Section - Becuase of how nav controll is implemented
 normal navbar will NOT work! */
@@ -247,10 +251,10 @@ normal navbar will NOT work! */
 
 /* Intro Section */
 #intro {
+  height: auto;
   .module-container {
     color: $secondary-color;
     background: transparent;
-    height: fit-content;
   }
 
   .module-content {
@@ -269,7 +273,8 @@ normal navbar will NOT work! */
     .tag {
       text-align: center;
       color: $primary-color-light;
-      padding: 10px 0;
+      padding: 0;
+      padding-top: 40px;
     }
 
     #typewritter {
@@ -309,13 +314,13 @@ normal navbar will NOT work! */
 
 /* About Section */
 #about {
-  height: 115vh;
+  height: auto;
 
   .module-container {
     background: transparent;
     color: $secondary-color;
-    max-height: 115vh;
-    height: fit-content;
+    // max-height: 115vh;
+    // height: fit-content;
   }
 
   .module-content {
@@ -349,10 +354,10 @@ normal navbar will NOT work! */
 
 /* Skill Section */
 #skill {
-  height: 95vh;
+  height: auto;
 
   .module-container {
-    height: 95vh;
+    // height: 95vh;
     background: transparent;
     color: $secondary-color;
   }

@@ -71,7 +71,7 @@
                 <a href="museum.php" class="action-style">Museum</a>
                 <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Wip</a>
                 <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Ideas</a>
-                <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Travel</a>
+                <a href="travel.php" class="action-style">Travel</a>
                 <a href="https://preview.p5js.org/JeffGuo1/present/GMTwwJhDa" target="_blank"
                     class="action-style">Art</a>
             </div>
@@ -151,14 +151,14 @@
             <i class="menu_close fa fa-times fa-lg"></i>
         </span>
         <ul id="menu-items">
-            <li><a href="museum.php"><i class="icon fas fa-archway fa-2x"></i>Museum</a></li>
+            <li><a href="museum.php"><i class="icon fas fa-archway fa-2x"></i></a></li>
             <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i
-                        class="icon fas fa-tasks fa-2x"></i>Wip</a></li>
+                        class="icon fas fa-tasks fa-2x"></i></a></li>
             <li class="disabled-action"><a href="#" data-toggle="modal" data-target="#alertModal"><i
-                        class="icon fas fa-lightbulb fa-2x"></i>Ideas</a></li>
+                        class="icon fas fa-lightbulb fa-2x"></i></a></li>
             <li><a href="https://preview.p5js.org/JeffGuo1/present/GMTwwJhDa">
-                    <i class="icon fas fa-palette fa-2x"></i>Art</a></li>
-            <li><a onclick="contactOverlay();"><i class="fas fa-comment fa-2x"></i>Contact</a></li>
+                    <i class="icon fas fa-palette fa-2x"></i></a></li>
+            <li><a onclick="contactOverlay();"><i class="fas fa-comment fa-2x"></i></a></li>
         </ul>
         <main id="page-content">
             <div class="page-content-inner">
@@ -182,7 +182,7 @@
                                             Also known as Jeff for most of my life.
                                         </p>
                                         <p>
-                                            My passion for developing applications that help reduce our daily workload
+                                            I have a passion for developing applications that help reduce our daily workload
                                             and my interest in rapid technology evolution have led me to become a
                                             computer
                                             engineer/scientist.
