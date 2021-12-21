@@ -182,10 +182,9 @@
                                             Also known as Jeff for most of my life.
                                         </p>
                                         <p>
-                                            I have a passion for developing applications that help reduce our daily workload
-                                            and my interest in rapid technology evolution have led me to become a
-                                            computer
-                                            engineer/scientist.
+                                            I have a passion for developing applications that help 
+                                            reduce our daily workload, and my interest in rapid technology 
+                                            evolution has led me to become a computer engineer/scientist.
                                         </p>
                                         <!-- <a class="general-butt" href="museum.php">
                                 Explore Projects
@@ -194,7 +193,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="module-content">
-                                        <img id="profile-img" src="images/professional.jpg">
+                                        <img id="profile-img" src="images/professional_green.png">
                                         <div class="section-bar">
                                             <ul>
                                                 <li><a href="#intro">Home</a></li>
@@ -215,35 +214,26 @@
                                     <div class="module-content">
                                         <h1>About Me</h1>
                                         <p>
-                                            I am a graduate of 2020 from the <em>University of Illinois at Chicago</em>,
+                                            I am a graduate of 2020 from the <em>University of Illinois at Chicago,</em> 
                                             with a degree in Computer Science and a minor in Business Administration. 
-                                            Currently pursuing a Master of Science with the <em>New York University</em>. <br><br>
-                                            My interests focus on designing, developing,
-                                            and analyzing algorithms and data to help improve the current state of the
-                                            technological society. My obsession with computers, designs, and
-                                            development has help me acheive many success and gain a wealth of
-                                            knowledge, but I am still a young and inexpereienced developer that is
-                                            still hungry to learn. <br><br>
-                                            Outside of the tech environment, I love to travel around the world and
-                                            explore
-                                            different cultures, foods, and knowledge. Aside from traveling, I love
-                                            keeping
-                                            memories with photography and sweeten life with coffee!<br><br>
+                                            I am currently pursuing a Master of Science at <em>New York University</em>.
+                                            <br><br>                                        
+                                            <!-- My interests focus on designing, developing, and analyzing algorithms and data.  -->
+                                            My obsession with computers, designs, and development has helped me achieve many 
+                                            successes and gain a wealth of knowledge. However, I am still a young and inexperienced 
+                                            developer who is still hungry to learn.
+                                            <br><br>                                            
+                                            Outside of the tech environment, I love to travel worldwide and 
+                                            explore different cultures, foods, and knowledge. Aside from traveling, 
+                                            I love keeping memories with photography and sweetening life with coffee!<br><br>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="module-content">
                                         <img class="img-style" src="images/placeholder.jpg" alt="placeholder">
-                                        <!-- <div class="icons">
-                                            <i class="fas fa-university"></i>
-                                            <i class="fas fa-laptop-code"></i>
-                                            <i class="fas fa-globe-americas"></i>
-                                            <i class="fas fa-camera-retro"></i>
-                                            <i class="fas fa-coffee"></i>
-                                        </div> -->
                                         <p style="text-align: center;">
-                                            Hope that you and I will grow together as we work towards our own vision.
+                                          Hope you and I will grow together as we work towards our own vision.
                                         </p>
                                         <div class="section-bar">
                                             <ul>
@@ -294,13 +284,13 @@
                                         <p class="skill-content">Django</p>
                                     </div>
                                     <div class="border-wrapper">
-                                        <p class="skill-content">CSS/SCSS</p>
+                                        <p class="skill-content">CSS3/SCSS</p>
+                                    </div>
+                                    <div class="border-wrapper">
+                                        <p class="skill-content">HTML5</p>
                                     </div>
                                     <div class="border-wrapper">
                                         <p class="skill-content">C#</p>
-                                    </div>
-                                    <div class="border-wrapper">
-                                        <p class="skill-content">F#</p>
                                     </div>
                                     <div class="border-wrapper">
                                         <p class="skill-content">Git</p>                                
