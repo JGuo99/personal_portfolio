@@ -1,0 +1,492 @@
+$primary-color-dark: #272A37;
+$primary-color-normal: #3c4155;
+$primary-color-light: #454A5E;
+$primary-color-royal: #0e2158;
+$secondary-color: #faebd7;
+$dark-color: #292929;
+
+// Nav Controller
+$red: #F37272;
+$snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
+$bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: $primary-color-light;
+}
+
+#progress-scroll {
+  img {
+    display: none;
+  }
+}
+
+#page-container {
+  height: 100%;
+}
+
+#page-content {
+  height: 200%; // Larger value or you'll see background when rotated
+  transform-origin: right;
+  transition: transform .7s $snap;
+}
+
+.page-content-inner {
+  height: 50%; // compensate for higher .content
+  transition: height 750ms ease-in-out; // Help smooth out the height transition
+  overflow-y: auto; // set expected overflow
+}
+
+#menu-toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  right: 0;
+  // display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: $primary-color-dark;
+  border-bottom-left-radius: 100%;
+
+  &:active {
+    i {
+      opacity: 0.8
+    }
+  }
+
+  i {
+    color: $secondary-color;
+  }
+
+  .menu_open,
+  .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    transition: transform .7s $snap;
+  }
+
+  .menu_open {
+    transform-origin: 100px -160px;
+  }
+
+  .menu_close {
+    transform: rotate(20deg);
+    transform-origin: 160px -100px;
+  }
+}
+
+#menu-items {
+  position: fixed;
+  top: 10%;
+  // left: 45%;
+  right: 0;
+  width: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  // padding-left: 40%;
+  padding-right: 3%;
+
+  li {
+    height: 60px;
+    margin-bottom: 5%;
+    transform: translateX(100vw);
+    transition: transform .7s 0s $snap;
+
+    &:nth-child(2) {
+      margin-left: 45px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 90px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 135px;
+    }
+
+    &:nth-child(5) {
+      margin-left: 180px;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: darken($secondary-color, 15%);
+    transition: color .2s;
+
+    .icon {
+      position: relative;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    &:hover {
+      .icon {
+        border-color: $red;
+      }
+    }
+  }
+}
+
+
+/* Let's open up the menu */
+.shazam {
+  #page-content {
+    transform: rotate(-30deg) translateY(-15%);
+  }
+
+  // this will show hidden content overflow when rotated,
+  // but will result in a jump, if you've already scrolled down the content
+  // plus, you will lose your current reading position
+  // fixable with JS, not gonna bother
+  // Temp. Fix ======================================
+  .page-content-inner {
+    // Kinda working with the tranistion effect!
+    height: 100%;
+  }
+
+  .menu_open {
+    transform: rotate(-20deg);
+  }
+
+  .menu_close {
+    transform: rotate(0) !important;
+  }
+
+  #menu-items {
+    li {
+      transform: translateX(0);
+      transition: transform .35s .45s $bounce;
+
+      &:nth-child(2) {
+        transition-delay: .47s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: .48s;
+      }
+    }
+  }
+}
+
+// ===== End of Nav Control =====
+
+/* Interaction Issue/Bug */
+.section-bar {
+  display: none;
+}
+
+.module-content {
+  h1 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 35px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
+.module-container {
+  margin: 10% auto;
+  display: contents;
+}
+
+/* Nav Section - Becuase of how nav controll is implemented
+normal navbar will NOT work! */
+#navbar {
+  display: none;
+}
+
+.nav-spacer {
+  display: none;
+}
+
+.section-bar {
+  ul {
+    padding: 3%;
+  }
+
+  a {
+    color: $primary-color-light;
+  }
+}
+
+.contact-action {
+  display: none;
+
+  .fa-comment {
+    display: none;
+  }
+}
+
+.overlay-small {
+  .contact-action {
+    display: block;
+  }
+}
+
+/* Intro Section */
+#intro {
+  height: auto;
+  .module-container {
+    color: $secondary-color;
+    background: transparent;
+  }
+
+  .module-content {
+    h1 {
+      padding: 10% 0;
+      font-weight: normal;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 15px 2%;
+    }
+
+    .tag {
+      text-align: center;
+      color: $primary-color-light;
+      padding: 0;
+      padding-top: 40px;
+    }
+
+    #typewritter {
+      font-size: 70px;
+    }
+    #cursor {
+      border-bottom: solid 3px $secondary-color;
+    }
+
+    // Animation
+    /* text animation */
+    @keyframes animated-text {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 300px;
+      }
+    }
+    @keyframes animated-cursor{
+      from {
+          border-bottom-color: $secondary-color;
+      }
+      to {
+          border-bottom-color: transparent;
+      }
+  }
+  }
+
+  #profile-img {
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 50%;
+  }
+}
+
+/* About Section */
+#about {
+  height: auto;
+
+  .module-container {
+    background: transparent;
+    color: $secondary-color;
+    // max-height: 115vh;
+    // height: fit-content;
+  }
+
+  .module-content {
+    margin: 5% auto;
+    transition: all 0.35s ease-in-out;
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    p {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 15px 2%;
+    }
+    .tag {
+      text-align: center;
+      color: $primary-color-light;
+      padding: 10px 0;
+    }
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .img-style {
+    padding: 0;
+  }
+}
+
+/* Skill Section */
+#skill {
+  height: auto;
+
+  .module-container {
+    // height: 95vh;
+    background: transparent;
+    color: $secondary-color;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .skill-container {
+    width: 100%;
+    .border-wrapper {
+      margin: 10px 5px;
+    }
+    .skill-content {
+      font-size: 22px;
+      font-weight: 700;
+      padding: 5px;
+    }
+  }
+}
+
+
+/* Contact Section */
+#contact {
+
+  .module-content {
+    margin: 0 auto;
+    margin-top: 25%;
+    width: 100%;
+  }
+
+  form {
+    padding: 1%;
+    margin: 15px auto;
+  }
+
+  .row-form {
+    display: block;
+  }
+
+  .row-form {
+    .input-group {
+      flex-basis: 0;
+    }
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  textarea {
+    min-height: 100px;
+    max-height: 100px;
+  }
+
+  label {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .input-group {
+    max-width: 1000px;
+  }
+
+  input:focus~label,
+  input:valid~label,
+  textarea:focus~label,
+  textarea:valid~label {
+    top: -25px;
+    font-size: 14px;
+  }
+
+  form {
+    .general-butt {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 30px;
+      font-size: 16px;
+    }
+  }
+}
+
+/* Social Link Section */
+#social {
+  .module-container {
+    margin: 0 auto;
+  }
+
+  .module-container,
+  .module-content,
+  .content-type2,
+  .icons {
+    min-height: 60px;
+    background: transparent;
+  }
+
+  .module-content,
+  .icons {
+    margin: 0 auto;
+    // margin-bottom: 60px;
+    padding: 0 10px;
+  }
+
+  .custom-icon1,
+  .custom-icon2,
+  .custom-icon3,
+  .custom-icon5 {
+    color: antiquewhite;
+    font-size: 35px;
+  }
+
+  .custom-icon4 {
+    color: antiquewhite;
+    font-size: 32px;
+  }
+
+  #mobile-seperator {
+    overflow: visible;
+    // For IE
+    padding: 0;
+    width: 75%;
+    border: none;
+    border-top: medium double antiquewhite;
+    color: antiquewhite;
+    text-align: center;
+    height: 0;
+    margin: 10px auto;
+  }
+
+  #mobile-seperator:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    margin-top: -0.25rem;
+    background: #272A37;
+  }
+}

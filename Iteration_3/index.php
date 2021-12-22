@@ -69,8 +69,8 @@
                 <a href="#contact" class="action-style" id="contact-a" href="javascript:void(0);">Contact</a>
                 <a href="#social" class="action-style" id="social-a">Social</a> -->
                 <a href="museum.php" class="action-style">Museum</a>
-                <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Wip</a>
-                <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Ideas</a>
+                <a href="wip.php" class="action-style">Wip & Ideas</a>
+                <!-- <a href="#" class="action-style disabled-action" data-toggle="modal" data-target="#alertModal">Ideas</a> -->
                 <a href="travel.php" class="action-style">Travel</a>
                 <a href="https://preview.p5js.org/JeffGuo1/present/GMTwwJhDa" target="_blank"
                     class="action-style">Art</a>
@@ -354,9 +354,9 @@
     }
 </script>
 <script src="scripts/home/script.js"></script>
-<script src="scripts/home/nav.js"></script>
 <script src="scripts/home/social.js"></script>
-<script src="scripts/home/responsive.js"></script>
+<script src="scripts/global/nav.js"></script>
+<script src="scripts/global/responsive.js"></script>
 <script src="scripts/global/loader.js"></script>
 <script src="scripts/global/progress.js"></script>
 <script>

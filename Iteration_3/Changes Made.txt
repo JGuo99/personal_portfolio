@@ -1,0 +1,6 @@
+Changes Made to:
+ - index.php
+ - wip.php
+ - script folder
+ - style folder
+ - 

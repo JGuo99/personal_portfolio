@@ -1,0 +1,127 @@
+$primary-color-dark: #272A37;
+$primary-color-normal: #3c4155;
+$primary-color-light: #454A5E;
+$primary-color-royal: #0e2158;
+$secondary-color: #faebd7;
+$secondary-color-accent-1: #B69870;
+$deep-dark: #292929;
+$coal-dark: #363636;
+$lead-grey: #434343;
+$base-grey: #4f4f4f;
+
+.module-container {
+    max-height: 85%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.module-content {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+#grid-body {
+    background: $deep-dark;
+
+    .grid-container {
+        display: grid;
+        justify-content: center;
+        grid-gap: 20px;
+        grid-template-columns: auto auto auto auto;
+        padding: 25px;
+        transition: all, 0.5s;
+
+        img {
+            aspect-ratio: 1/1;
+            width: 300px;
+        }
+
+        .grid-wip-item {
+            position: relative;
+            background-color: $secondary-color;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .grid-idea-item {
+            position: relative;
+            background-color: $base-grey;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .grid-desc {
+            transition: 0.25s ease-in-out;
+            width: 0;
+            margin-top: -5px;
+
+            * {
+                width: 0;
+                height: 0;
+                padding: 0;
+                margin-top: 0;
+                z-index: -1;
+            }
+            
+            p {
+                z-index: -1;
+                display: none;
+            }
+        }
+
+        :hover {
+            z-index: 5;
+            direction: rtl;
+            .grid-desc {                
+                float: right;
+                position: absolute;
+                width: 665px;
+                height: 310px;
+                background-color: $secondary-color;
+                z-index: 5;
+
+                p {
+                    display: block;
+                    padding: 10px;
+                    width: 655px;
+                    height: 300px;
+                    color: $deep-dark;
+                }
+            }
+        }
+    }
+}
+
+
+#footer {
+    background: $primary-color-normal;
+    z-index: 100;
+}
+
+@media only screen and (orientation:landscape) and (max-device-width: 600px) {
+    #navbar {
+        height: 60px;
+        padding: 10px;
+        #logo {
+            font-size: 28px;
+            padding-left: 15px;
+        }
+
+        #tabs {
+            font-size: 18px;
+        }
+    }
+
+    #footer {
+        .module-content {
+            min-height: 80px;
+        }
+    }
+}
